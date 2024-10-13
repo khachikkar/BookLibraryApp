@@ -36,7 +36,7 @@ function App() {
       setData(filtered);
       }
       
-  }, [val]);
+  }, [val, data, fulldata]);
 
 
 // part of add books
