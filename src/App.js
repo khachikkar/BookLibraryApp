@@ -42,13 +42,23 @@ function App() {
 // part of add books
   const [bookval, setBookval] = useState("")
   const handleadd = ()=>{
+
+
+
     const newbook = {
       id: Date.now(),
       name: bookval
     }
 
+    if(bookval === ""){
+      alert("write a book name")
+      return
+    }
+
 // data.push(newbook)
 setData([...data, newbook])
+
+
 fulldata.push(newbook) // i add this for show data after search empaty value
     setFulldata(data)
     setBookval("")
